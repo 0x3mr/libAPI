@@ -68,7 +68,7 @@ docker run -p 5000:5000 libapi
 Swagger UI is available at `/api-docs`
 
 ## Postman Collection
-Link: [Postman Collection](https://www.postman.com/cryosat-geoscientist-8430645/workspace/college/collection/39010113-977d2deb-d6ca-4441-a6f2-194fdbbe5af2?action=share&creator=39010113)
+Link: [Postman Collection](https://www.postman.com/cryosat-geoscientist-8430645/workspace/college/request/39010113-39fabb8b-c75a-475d-8c1b-eb336244f392?action=share&creator=39010113&ctx=documentation)
 
 ## Notes
 - Data is stored in a local `books.json` file
