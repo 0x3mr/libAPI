@@ -39,12 +39,12 @@ python app.py
 ### Docker Deployment
 1. Build the Docker image
 ```bash
-docker build -t libAPI .
+docker build -t libapi .
 ```
 
 2. Run the Docker container
 ```bash
-docker run -p 5000:5000 libAPI
+docker run -p 5000:5000 libapi
 ```
 
 ## API Endpoints
