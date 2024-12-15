@@ -83,6 +83,9 @@ libAPI/
 ├── static/
 │   └── swagger.json         # API documentation
 │
+├── templates/
+│   └── index.html           # HTML documentation
+│
 ├── LICENSE                  # MIT License
 └── README.md                # Project outline
 ```

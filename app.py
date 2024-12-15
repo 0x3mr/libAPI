@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_swagger_ui import get_swaggerui_blueprint
 import json
 import os
@@ -43,6 +43,13 @@ def save_books(books):
             json.dump(books, f, indent=4)
     except IOError as e:
         raise Exception(f"Error saving books: {e}")
+
+@app.route('/', methods=['GET'])
+def home():
+    """
+    Serve the HTML documentation page at the root URL.
+    """
+    return render_template('index.html')
 
 
 @app.route('/books', methods=['POST'])

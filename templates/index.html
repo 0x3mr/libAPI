@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>libAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .endpoint {
+            margin-bottom: 20px;
+        }
+
+        .method {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 onclick="location.href='https://github.com/0x3mr/libAPI';" style="cursor: pointer;">libAPI
+        </h1>
+        <p>API for managing books in a library<br>CSAI-203 Course Assignment by Amr Abdelfattah</p>
+    </header>
+    <div class="container">
+        <h2>Endpoints</h2>
+        <div class="endpoint">
+            <p class="method">POST</p>
+            <p><code>/books</code></p>
+            <p>Add a new book to the library. Requires the following fields:</p>
+            <ul>
+                <li><code>title</code> (string)</li>
+                <li><code>author</code> (string)</li>
+                <li><code>publishedYear</code> (integer)</li>
+                <li><code>isbn</code> (string)</li>
+                <li><code>genre</code> (string, optional)</li>
+            </ul>
+        </div>
+        <div class="endpoint">
+            <p class="method">GET</p>
+            <p><code>/books</code></p>
+            <p>Retrieve a list of all books. Optional query parameters:</p>
+            <ul>
+                <li><code>author</code> (string)</li>
+                <li><code>publishedYear</code> (integer)</li>
+                <li><code>genre</code> (string)</li>
+            </ul>
+        </div>
+        <div class="endpoint">
+            <p class="method">DELETE</p>
+            <p><code>/books/{isbn}</code></p>
+            <p>Delete a book by its ISBN.</p>
+        </div>
+        <div class="endpoint">
+            <p class="method">PUT</p>
+            <p><code>/books/{isbn}</code></p>
+            <p>Update the details of a book by its ISBN. Accepts the following fields:</p>
+            <ul>
+                <li><code>title</code> (string)</li>
+                <li><code>author</code> (string)</li>
+                <li><code>publishedYear</code> (integer)</li>
+                <li><code>genre</code> (string, optional)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
