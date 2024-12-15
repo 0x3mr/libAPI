@@ -1,4 +1,4 @@
-# Library Management API
+# [Library Management API](https://libapi-assignment.azurewebsites.net/)
 
 This is a simple Flask-based RESTful API for managing a library's book collection. The API allows users to add, list, search, update, and delete books. This project is an assignment served as a part of the CSAI-203 (Introduction to Software Engineering) course in Zewail UST.
 
@@ -9,6 +9,9 @@ This is a simple Flask-based RESTful API for managing a library's book collectio
 - Delete books by ISBN
 - Update book details
 - Swagger UI documentation
+
+## Live Version
+- https://libapi-assignment.azurewebsites.net/
 
 ## Dependencies
 - Docker
