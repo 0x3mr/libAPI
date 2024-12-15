@@ -1,0 +1,138 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Library Management API",
+        "description": "API for managing books in a library",
+        "version": "1.0.0"
+    },
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/books": {
+            "post": {
+                "summary": "Add a new book",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "publishedYear": {
+                                    "type": "integer"
+                                },
+                                "isbn": {
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "title",
+                                "author",
+                                "publishedYear",
+                                "isbn"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Book created successfully"
+                    }
+                }
+            },
+            "get": {
+                "summary": "List or search books",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "author",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "publishedYear",
+                        "type": "integer"
+                    },
+                    {
+                        "in": "query",
+                        "name": "genre",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of books"
+                    }
+                }
+            }
+        },
+        "/books/{isbn}": {
+            "delete": {
+                "summary": "Delete a book by ISBN",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "isbn",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Book deleted successfully"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update book details",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "isbn",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "author": {
+                                    "type": "string"
+                                },
+                                "publishedYear": {
+                                    "type": "integer"
+                                },
+                                "genre": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Book updated successfully"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+{
+    "info": {
+        "_postman_id": "a1b2c3d4-e5f6-7890-g1h2-i3j4k5l6m7n8",
+        "name": "Library API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add a New Book",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"New Book Title\",\n    \"author\": \"Author Name\",\n    \"publishedYear\": 2023,\n    \"isbn\": \"1234567890\",\n    \"genre\": \"Fiction\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "List All Books",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Search Books by Author",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/books?author=Author%20Name",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books"
+                    ],
+                    "query": [
+                        {
+                            "key": "author",
+                            "value": "Author%20Name"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Search Books by Published Year",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/books?publishedYear=2023",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books"
+                    ],
+                    "query": [
+                        {
+                            "key": "publishedYear",
+                            "value": "2023"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Search Books by Genre",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/books?genre=Fiction",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books"
+                    ],
+                    "query": [
+                        {
+                            "key": "genre",
+                            "value": "Fiction"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Book",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"Updated Book Title\",\n    \"genre\": \"Updated Genre\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/books/1234567890",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books",
+                        "1234567890"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Book",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/books/1234567890",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "5000",
+                    "path": [
+                        "books",
+                        "1234567890"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
