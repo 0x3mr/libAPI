@@ -1,0 +1,9 @@
+[
+    {
+        "title": "New Book Title",
+        "author": "Author Name",
+        "publishedYear": 2023,
+        "isbn": "1234567891",
+        "genre": "Fiction"
+    }
+]
